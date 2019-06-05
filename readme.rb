@@ -1,0 +1,51 @@
+#!/bin/ruby
+
+require_relative 'rbib/rbib'
+extend RBib
+
+load 'example-data.rb'
+load 'example-format.rb'
+
+File.open('README.md', 'w') do |out|
+  out.puts '# BibTeX rainbow'
+  out.puts ''
+  out.puts 'RBib v%d.%d.%d'%[RBib::VERSION_MAJOR, RBib::VERSION_MINOR]
+  out.puts ''
+
+  out.puts '## Single input file'
+  out.puts ''
+  out.puts '```'
+  out.puts File.read('example-data.rb')
+  out.puts '```'
+  out.puts ''
+
+  [
+    RBib::Format::Shortest,
+    RBib::Format::Shorter,
+    RBib::Format::Short,
+    RBib::Format::Long,
+    RBib::Format::Longer,
+    RBib::Format::Longest,
+  ].each do |format|
+    RBib::DB.restore
+    out.puts '## %s'%[format]
+    out.puts ''
+    out.puts '```'
+    format.process(out)
+    out.puts '```'
+    out.puts ''
+  end
+
+  out.puts '# Custom format'
+  out.puts ''
+  out.puts '```'
+  out.puts File.read('example-format.rb')
+  out.puts '```'
+  out.puts ''
+
+  out.puts '```'
+  RBib::DB.restore
+  CustomFormat.process(out)
+  out.puts '```'
+  out.puts ''
+end
