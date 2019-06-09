@@ -6,11 +6,11 @@ module RBib
   class Format::Base
     CROSSREFS = [:proceedings, :book]
     def self.process out
-      DB.data.select {|e| CROSSREFS.include?(e.type)}.each {|entry| format(entry)}
-      DB.data.select {|e| !CROSSREFS.include?(e.type)}.each {|entry| format(entry)}
+      DB.data.select {|e| CROSSREFS.include?(e._type)}.each {|entry| format(entry)}
+      DB.data.select {|e| !CROSSREFS.include?(e._type)}.each {|entry| format(entry)}
 
       # publications
-      ents = DB.data.select {|e| !CROSSREFS.include?(e.type)}
+      ents = DB.data.select {|e| !CROSSREFS.include?(e._type)}
       ents = ents.map {|e| [e.rec_get(:year).to_s, e.get(:key), print(e)]}
       ents = ents.delete_if {|_,k,_| k.nil?}
       unless ents.map(&:last).all?(&:nil?)
@@ -34,7 +34,7 @@ module RBib
       end
 
       # books
-      ents = DB.data.select {|e| e.type == :book}
+      ents = DB.data.select {|e| e._type == :book}
       ents = ents.map {|e| [e.rec_get(:year).to_s, e.get(:key), print(e)]}
       ents = ents.delete_if {|_,k,_| k.nil?}
       unless ents.map(&:last).all?(&:nil?)
@@ -58,7 +58,7 @@ module RBib
       end
 
       # proceedings
-      ents = DB.data.select {|e| e.type == :proceedings}
+      ents = DB.data.select {|e| e._type == :proceedings}
       ents = ents.map {|e| [e.get(:year).to_s, e.get(:key), print(e)]}
       ents = ents.delete_if {|_,k,_| k.nil?}
       unless ents.map(&:last).all?(&:nil?)
@@ -76,7 +76,7 @@ module RBib
     end
 
     def self.format entry
-      case entry.type
+      case entry._type
       when :proceedings
         entry.set(:booktitle, entry.get(:title)) unless entry.get(:booktitle)
         entry.set(:title, entry.get(:booktitle)) unless entry.get(:title)
@@ -85,7 +85,7 @@ module RBib
 
     def self.print entry
       out = []
-      case entry.type
+      case entry._type
       when :article
         # ignored: month key
         out << '@article{%s,'%[entry.get(:key)]
@@ -178,7 +178,7 @@ module RBib
       when :unpublished # todo
 
       else
-        return '%% Unsupported entry type ("%s" is a %s)'%[entry.get(:key), entry.type]
+        return '%% Unsupported entry type (%s)'%[entry.get(:key)]
       end
       out << '}'
       out.join("\n")
@@ -192,7 +192,7 @@ module RBib
 
   class Format::Longest < Format::Base
     def self.format entry
-      case entry.type
+      case entry._type
       when :proceedings
         title = entry.get(:title)
         title = '%s %s'%[entry.get(:title_prefix), title] if entry.get(:title_prefix)
@@ -207,7 +207,7 @@ module RBib
 
   class Format::Longer < Format::Longest
     def self.format entry
-      case entry.type
+      case entry._type
       when :inproceedings
         crf = entry.get(:crossref)
         if crf
@@ -225,7 +225,7 @@ module RBib
     end
 
     def self.print entry
-      case entry.type
+      case entry._type
       when :proceedings
         return
       end
@@ -237,7 +237,7 @@ module RBib
     def self.format entry
       entry.delete(:doi)
       entry.delete(:isbn)
-      case entry.type
+      case entry._type
       when :proceedings
         entry.delete(:title_suffix)
       end
@@ -247,7 +247,7 @@ module RBib
 
   class Format::Short < Format::Long
     def self.format entry
-      case entry.type
+      case entry._type
       when :proceedings
         entry.delete(:title_prefix)
       end
@@ -258,7 +258,7 @@ module RBib
   class Format::Shorter < Format::Short
     def self.format entry
       entry.update(:series, entry.get(:series_short))
-      case entry.type
+      case entry._type
       when :article
         entry.update(:journal, entry.get(:journal_short))
         entry.delete(:series_short)
@@ -273,7 +273,8 @@ module RBib
     def self.format entry
       entry.update(:series, entry.get(:series_abbrv))
       entry.delete(:series_short, :series_abbrv)
-      case entry.type
+      entry.delete(:publisher)
+      case entry._type
       when :article
         if entry.get(:journal_abbrv)
           entry.update(:journal, entry.get(:journal_abbrv))

@@ -32,11 +32,11 @@ module RBib
   DB = Database.new
 
   class Entry
-    attr_reader :type, :data
+    attr_reader :_type, :fields
 
     def initialize type
-      @type = type
-      @data = []
+      @_type = type
+      @fields = []
       @protected = []
     end
 
@@ -83,7 +83,7 @@ module RBib
     end
 
     def get *keys
-      v = @data.find {|(k,_)| keys.include?(k) }&.last&.to_s
+      v = @fields.find {|(k,_)| keys.include?(k) }&.last&.to_s
       case v
       when NilClass
         return keys[0] == 'year' ? '0' : nil
@@ -97,7 +97,7 @@ module RBib
     def set key, value
       return if @protected.include?(key)
       delete key
-      @data << [key, value]
+      @fields << [key, value]
     end
 
     def update key, value
@@ -106,28 +106,28 @@ module RBib
 
     def delete *keys
       return if keys.any? {|key| @protected.include?(key)}
-      @data.delete_if {|(k,_)| keys.include?(k) }
+      @fields.delete_if {|(k,_)| keys.include?(k) }
     end
 
     def get_all key
-      @data.select {|(k,_)| k == key}.map {|k,v| v.is_a?(String) ? clean_str(v) : v}
+      @fields.select {|(k,_)| k == key}.map {|k,v| v.is_a?(String) ? clean_str(v) : v}
     end
 
     def merge x
-      @data.push(*x.data.reject {|a| a.first == :key || @protected.include?(a.first)})
+      @fields.push(*x.fields.reject {|a| a.first == :key || @protected.include?(a.first)})
     end
 
     def method_missing name, *args, &block
-      args.each {|arg| @data << [name, arg]}
+      args.each {|arg| @fields << [name, arg]}
     end
 
     def backup
-      @bak = @data.dup
+      @bak = @fields.dup
     end
 
     def restore
       if @bak
-        @data = @bak.dup
+        @fields = @bak.dup
         @protected.clear
       else
         backup
