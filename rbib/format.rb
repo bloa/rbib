@@ -11,7 +11,7 @@ module RBib
 
       # publications
       ents = DB.data.select {|e| !CROSSREFS.include?(e._type)}
-      ents = ents.map {|e| [e.rec_get(:year).to_s, e.get(:key), print(e)]}
+      ents = ents.map {|e| [e.rec_get(:year).to_s[/\d*$/], e.get(:key), print(e)]}
       ents = ents.delete_if {|_,k,_| k.nil?}
       unless ents.map(&:last).all?(&:nil?)
         ents.sort_by! {|(_,k,_)| k}
@@ -35,7 +35,7 @@ module RBib
 
       # books
       ents = DB.data.select {|e| e._type == :book}
-      ents = ents.map {|e| [e.rec_get(:year).to_s, e.get(:key), print(e)]}
+      ents = ents.map {|e| [e.rec_get(:year).to_s[/\d*$/], e.get(:key), print(e)]}
       ents = ents.delete_if {|_,k,_| k.nil?}
       unless ents.map(&:last).all?(&:nil?)
         ents.sort_by! {|(_,k,_)| k}
@@ -59,7 +59,7 @@ module RBib
 
       # proceedings
       ents = DB.data.select {|e| e._type == :proceedings}
-      ents = ents.map {|e| [e.get(:year).to_s, e.get(:key), print(e)]}
+      ents = ents.map {|e| [e.get(:year).to_s[/\d*$/], e.get(:key), print(e)]}
       ents = ents.delete_if {|_,k,_| k.nil?}
       unless ents.map(&:last).all?(&:nil?)
         ents.sort_by! {|(_,k,_)| k}
