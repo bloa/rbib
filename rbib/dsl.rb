@@ -159,12 +159,42 @@ module RBib
     DB.data << e
   end
 
+  def inbook &block
+    e = Entry.new(:inbook)
+    e.instance_eval(&block)
+    DB.data << e
+  end
+
+  def incollection &block
+    e = Entry.new(:incollection)
+    e.instance_eval(&block)
+    DB.data << e
+  end
+
   def inproceedings &block
     e = Entry.new(:inproceedings)
     e.instance_eval(&block)
     DB.data << e
   end
   alias conference inproceedings
+
+  def manual &block
+    e = Entry.new(:manual)
+    e.instance_eval(&block)
+    DB.data << e
+  end
+
+  def mastersthesis &block
+    e = Entry.new(:mastersthesis)
+    e.instance_eval(&block)
+    DB.data << e
+  end
+
+  def misc &block
+    e = Entry.new(:misc)
+    e.instance_eval(&block)
+    DB.data << e
+  end
 
   def proceedings &block
     e = Entry.new(:proceedings)
@@ -178,5 +208,17 @@ module RBib
     DB.data << e
   end
   alias phd phdthesis
+
+  def techreport &block
+    e = Entry.new(:techreport)
+    e.instance_eval(&block)
+    DB.data << e
+  end
+
+  def unpublished &block
+    e = Entry.new(:unpublished)
+    e.instance_eval(&block)
+    DB.data << e
+  end
 
 end

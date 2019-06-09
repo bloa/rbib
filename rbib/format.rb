@@ -85,108 +85,141 @@ module RBib
 
     def self.print entry
       out = []
+      out << '@%s{%s,'%[entry._type, entry.get(:key)]
       case entry._type
       when :article
-        # ignored: month key
-        out << '@article{%s,'%[entry.get(:key)]
         add(out, 'author', entry.get_all(:author).join(" and\n               "))
         add(out, 'title', entry.get(:title))
         add(out, 'journal', entry.get(:journal))
         add(out, 'volume', entry.get(:volume))
         add(out, 'number', entry.get(:number))
         add(out, 'pages', entry.get(:pages))
-        add(out, 'doi', entry.get(:doi))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
 
       when :book
-        # ignored: address edition month key url
-        out << '@book{%s,'%[entry.get(:key)]
         add(out, 'author', entry.get_all(:author).join(" and\n               "))
         add(out, 'editor', entry.get_all(:editor).join(" and\n               "))
         add(out, 'title', entry.get(:title))
-        add(out, 'publisher', entry.get(:publisher))
         add(out, 'volume', entry.get(:volume))
         add(out, 'number', entry.get(:number))
         add(out, 'series', entry.get(:series))
-        add(out, 'isbn', entry.get(:isbn))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
+        add(out, 'publisher', entry.get(:publisher))
 
       when :booklet
-        # ignored: howpublished address month key
-        out << '@booklet{%s,'%[entry.get(:key)]
         add(out, 'author', entry.get_all(:author).join(" and\n               "))
         add(out, 'title', entry.get(:title))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
 
-      when :inbook # todo
-      when :incollection # todo
-
-      when :inproceedings # todo
-        out << '@inproceedings{%s,'%[entry.get(:key)]
+      when :inbook
         add(out, 'author', entry.get_all(:author).join(" and\n               "))
         add(out, 'title', entry.get(:title))
+        add(out, 'crossref', entry.get(:crossref))
         add(out, 'booktitle', entry.get(:booktitle))
         add(out, 'editor', entry.get_all(:editor).join(" and\n               "))
         add(out, 'series', entry.get(:series))
         add(out, 'volume', entry.get(:volume))
+        add(out, 'number', entry.get(:number))
+        add(out, 'type', entry.get(:type))
+        add(out, 'chapter', entry.get(:chapter))
         add(out, 'publisher', entry.get(:publisher))
         add(out, 'pages', entry.get(:pages))
-        add(out, 'doi', entry.get(:doi))
-        add(out, 'crossref', entry.get(:crossref))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
 
-      when :manual # todo
+      when :incollection
+        add(out, 'author', entry.get_all(:author).join(" and\n               "))
+        add(out, 'title', entry.get(:title))
+        add(out, 'crossref', entry.get(:crossref))
+        add(out, 'booktitle', entry.get(:booktitle))
+        add(out, 'editor', entry.get_all(:editor).join(" and\n               "))
+        add(out, 'series', entry.get(:series))
+        add(out, 'volume', entry.get(:volume))
+        add(out, 'number', entry.get(:number))
+        add(out, 'type', entry.get(:type))
+        add(out, 'chapter', entry.get(:chapter))
+        add(out, 'publisher', entry.get(:publisher))
+        add(out, 'edition', entry.get(:edition))
+        add(out, 'pages', entry.get(:pages))
+
+      when :inproceedings
+        add(out, 'author', entry.get_all(:author).join(" and\n               "))
+        add(out, 'title', entry.get(:title))
+        add(out, 'crossref', entry.get(:crossref))
+        add(out, 'booktitle', entry.get(:booktitle))
+        add(out, 'editor', entry.get_all(:editor).join(" and\n               "))
+        add(out, 'series', entry.get(:series))
+        add(out, 'volume', entry.get(:volume))
+        add(out, 'number', entry.get(:number))
+        add(out, 'publisher', entry.get(:publisher))
+        add(out, 'organization', entry.get(:organization))
+        add(out, 'pages', entry.get(:pages))
+
+      when :manual
+        add(out, 'author', entry.get_all(:author).join(" and\n               "))
+        add(out, 'title', entry.get(:title))
+        add(out, 'edition', entry.get(:edition))
+        add(out, 'organization', entry.get(:organization))
 
       when :mastersthesis
-        # ignored: type address month key
-        out << '@mastersthesis{%s,'%[entry.get(:key)]
         add(out, 'author', entry.get_all(:author).join(" and\n               "))
         add(out, 'title', entry.get(:title))
         add(out, 'school', entry.get(:school))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
+        add(out, 'type', entry.get(:type))
 
-      when :misc # todo
+      when :misc
+        add(out, 'author', entry.get_all(:author).join(" and\n               "))
+        add(out, 'title', entry.get(:title))
+        add(out, 'howpublished', entry.get(:howpublished))
 
       when :phdthesis
-        # ignored: type address month key
-        out << '@phdthesis{%s,'%[entry.get(:key)]
         add(out, 'author', entry.get_all(:author).join(" and\n               "))
         add(out, 'title', entry.get(:title))
         add(out, 'school', entry.get(:school))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
+        add(out, 'type', entry.get(:type))
 
-      when :proceedings # todo
-        out << '@proceedings{%s,'%[entry.get(:key)]
+      when :proceedings
         add(out, 'editor', entry.get_all(:editor).join(" and\n               "))
         add(out, 'title', entry.get(:title, :booktitle))
         add(out, 'booktitle', entry.get(:booktitle, :title))
         add(out, 'series', entry.get(:series))
         add(out, 'volume', entry.get(:volume))
+        add(out, 'number', entry.get(:number))
         add(out, 'publisher', entry.get(:publisher))
-        add(out, 'isbn', entry.get(:isbn))
-        add(out, 'doi', entry.get(:doi))
-        add(out, 'note', entry.get(:note))
-        add(out, 'year', entry.get(:year))
+        add(out, 'organization', entry.get(:organization))
 
-      when :techreport # todo
-      when :unpublished # todo
+      when :techreport
+        add(out, 'author', entry.get_all(:author).join(" and\n               "))
+        add(out, 'title', entry.get(:title))
+        add(out, 'institution', entry.get(:institution))
+        add(out, 'type', entry.get(:type))
+        add(out, 'number', entry.get(:number))
+
+      when :unpublished
+        add(out, 'author', entry.get_all(:author).join(" and\n               "))
+        add(out, 'title', entry.get(:title))
 
       else
         return '%% Unsupported entry type (%s)'%[entry.get(:key)]
       end
+
+      add(out, 'isbn', entry.get(:isbn))
+      add(out, 'doi', entry.get(:doi))
+      add(out, 'note', entry.get(:note))
+      add_many(out, 'url', entry.get_all(:url))
+      add(out, 'year', entry.get(:year))
       out << '}'
       out.join("\n")
     end
 
     def self.add out, key, value
       return unless value && value != ''
-      out << '  %-9s = {%s},'%[key, value]
+      if value =~ /^(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)$/
+        out << '  %-9s = %s,'%[key, value]
+      elsif value =~ /\s#\s/
+        out << '  %-9s = %s,'%[key, value]
+      else
+        out << '  %-9s = {%s},'%[key, value]
+      end
+    end
+
+    def self.add_many out, key, values
+      values.each {|v| add(out, key, v)}
     end
   end
 
