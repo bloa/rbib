@@ -3,19 +3,17 @@
 require_relative 'rbib/rbib'
 extend RBib
 
-load 'example-data.rb'
-load 'example-format.rb'
+load 'example-readme/data.rb'
+load 'example-readme/format.rb'
 
 File.open('README.md', 'w') do |out|
   out.puts '# BibTeX rainbow'
-  out.puts ''
-  out.puts 'RBib v%d.%d.%d'%[RBib::VERSION_MAJOR, RBib::VERSION_MINOR]
   out.puts ''
 
   out.puts '## Single input file'
   out.puts ''
   out.puts '```'
-  out.puts File.read('example-data.rb')
+  out.puts File.read('example-readme/data.rb')
   out.puts '```'
   out.puts ''
 
@@ -39,7 +37,7 @@ File.open('README.md', 'w') do |out|
   out.puts '# Custom format'
   out.puts ''
   out.puts '```'
-  out.puts File.read('example-format.rb')
+  out.puts File.read('example-readme/format.rb')
   out.puts '```'
   out.puts ''
 

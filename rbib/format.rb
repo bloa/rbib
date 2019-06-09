@@ -240,6 +240,7 @@ module RBib
 
   class Format::Longer < Format::Longest
     def self.format entry
+      entry.delete(:url)
       case entry._type
       when :inproceedings
         crf = entry.get(:crossref)
@@ -247,6 +248,7 @@ module RBib
           entry.inherit(crf)
           entry.delete(:crossref)
         end
+        entry.delete(:editor)
       when :proceedings
         entry.delete(:place)
         super
@@ -270,6 +272,7 @@ module RBib
     def self.format entry
       entry.delete(:doi)
       entry.delete(:isbn)
+      entry.delete(:organization)
       case entry._type
       when :proceedings
         entry.delete(:title_suffix)

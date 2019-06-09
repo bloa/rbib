@@ -22,7 +22,6 @@ proceedings {
   title_short '{FAKE} 10'
   editor 'First Editor', 'Second Editor', 'Third Editor'
   volume 12345
-  isbn '978-3-319-50348-6'
   doi '10.1007/123-4-56789-0'
   place 'Anywhere, Earth'
   date 'January 1--31, 2000'
@@ -92,7 +91,6 @@ article {
   booktitle = {{FAKE} 10},
   series    = {LNCS},
   volume    = {12345},
-  publisher = {Springer},
   pages     = {32--47},
   year      = {2000},
 }
@@ -297,9 +295,9 @@ article {
   author    = {Author, First and
                Author, Last},
   title     = {Alternative News of the {FuTuRe}},
+  crossref  = {conf/fake/2000},
   pages     = {32--47},
   doi       = {10.1007/123-4-56789-0\_1},
-  crossref  = {conf/fake/2000},
 }
 
 
@@ -316,7 +314,6 @@ article {
   series    = {Lecture Notes in Computer Science},
   volume    = {12345},
   publisher = {Springer},
-  isbn      = {978-3-319-50348-6},
   doi       = {10.1007/123-4-56789-0},
   year      = {2000},
 }
@@ -370,7 +367,7 @@ end
   author    = {Author, First and
                Author, Last},
   title     = {Alternative News of the {FuTuRe}},
-  booktitle = {Future Arbitrary Knowledge for Education},
+  booktitle = {Future Arbitrary Knowledge for Education ({FAKE} 10)},
   series    = {LNCS},
   volume    = {12345},
   publisher = {Springer},

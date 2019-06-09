@@ -17,7 +17,6 @@ proceedings {
   title_short '{FAKE} 10'
   editor 'First Editor', 'Second Editor', 'Third Editor'
   volume 12345
-  isbn '978-3-319-50348-6'
   doi '10.1007/123-4-56789-0'
   place 'Anywhere, Earth'
   date 'January 1--31, 2000'
@@ -31,7 +30,7 @@ inproceedings {
          'Author, Last'
   crossref 'conf/fake/2000'
   pages '32--47'
-  doi '10.1007/123-4-56789-0\\_1'
+  doi '10.1007/123-4-56789-0\_1'
 }
 
 fragment {
