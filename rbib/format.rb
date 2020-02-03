@@ -81,6 +81,13 @@ module RBib
         entry.set(:booktitle, entry.get(:title)) unless entry.get(:booktitle)
         entry.set(:title, entry.get(:booktitle)) unless entry.get(:title)
       end
+      subtitle = entry.get(:subtitle)
+      if subtitle
+        title = entry.get(:title)
+        subtitle = '{%s}%s'%[subtitle[0].upcase, subtitle[1..]] if subtitle[0][/[A-z]/]
+        entry.set(:title, title ? '%s -- %s'%[title, subtitle] : subtitle)
+        entry.delete(:subtitle)
+      end
     end
 
     def self.print entry
