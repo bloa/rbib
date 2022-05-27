@@ -31,6 +31,14 @@ module RBib
 
   DB = Database.new
 
+  class Promise
+    attr_reader :block
+
+    def initialize &block
+      @block = block
+    end
+  end
+
   class Entry
     attr_reader :_type, :fields
 
@@ -59,12 +67,6 @@ module RBib
     def clean_str s
       v = s.dup
       v.gsub!(/[\s\n]+/m, ' ')
-      v.gsub!(/[àèìòùÀÈÌÒÙ]/) {|s| '{\\`{%s}}'%[s.tr('àèìòùÀÈÌÒÙ', 'aeiouAEIOU')]}
-      v.gsub!(/[áéíóúýÁÉÍÓÚÝ]/) {|s| '{\\\'{%s}}'%[s.tr('áéíóúýÁÉÍÓÚÝ', 'aeiouyAEIOUY')]}
-      v.gsub!(/[âêîôûÂÊÎÔÛ]/) {|s| '{\\^{%s}}'%[s.tr('âêîôûÂÊÎÔÛ', 'aeiouAEIOU')]}
-      v.gsub!(/[ãñõÃÑÕ]/) {|s| '{\\~{%s}}'%[s.tr('ãñõÃÑÕ', 'anoANO')]}
-      v.gsub!(/[äëïöüÿÄËÏÖÜŸ]/) {|s| '{\\"{%s}}'%[s.tr('äëïöüÿÄËÏÖÜŸ', 'aeiouyAEIOUY')]}
-      v.gsub!(/[çÇ]/) {|s| '{\\~{%s}}'%[s.tr('çÇ', 'cC')]}
       v
     end
 
@@ -82,16 +84,23 @@ module RBib
       return v
     end
 
-    def get *keys
-      v = @fields.find {|(k,_)| keys.include?(k) }&.last&.to_s
-      case v
+    def realize_value value, key=nil
+      case value
       when NilClass
-        return keys[0] == 'year' ? '0' : nil
+        return key == 'year' ? '0' : nil
+      when Promise
+        return instance_eval(&value.block)
       when String
-        return nil if v =~ /^\s*$/
-        return clean_str(v)
+        return nil if value =~ /^\s*$/
+        return clean_str(value)
+      else
+        return value.to_s
       end
-      return v
+    end
+
+    def get *keys
+      v = @fields.find {|(k,_)| keys.include?(k) }&.last
+      realize_value(v, keys[0])
     end
 
     def set key, value
@@ -106,15 +115,24 @@ module RBib
 
     def delete *keys
       return if keys.any? {|key| @protected.include?(key)}
-      @fields.delete_if {|(k,_)| keys.include?(k) }
+      @fields.delete_if {|(k,_)| keys.include?(k)}
     end
 
     def get_all key
-      @fields.select {|(k,_)| k == key}.map {|k,v| v.is_a?(String) ? clean_str(v) : v}
+      @fields.select {|(k,_)| k == key}.map {|k,v| realize_value(v, k)}
+    end
+
+    def maybe_merge x
+      keys = @fields.map(&:first)
+      @fields.push(*x.fields.reject {|a| keys.include?(a.first) || @protected.include?(a.first)})
     end
 
     def merge x
       @fields.push(*x.fields.reject {|a| a.first == :key || @protected.include?(a.first)})
+    end
+
+    def promise &block
+      Promise.new &block
     end
 
     def method_missing name, *args, &block
@@ -135,21 +153,37 @@ module RBib
     end
   end
 
+  @@default = Entry.new(nil)
+
+  def default &block
+    e = Entry.new(nil)
+    e.instance_eval(&block)
+    @@default = e
+  end
+
+  def load file
+    @@default = Entry.new(nil)
+    Kernel.load file
+  end
+
   def fragment &block
     e = Entry.new(:fragment)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.fragments << e
   end
 
   def article &block
     e = Entry.new(:article)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def book &block
     e = Entry.new(:book)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
@@ -162,18 +196,21 @@ module RBib
   def inbook &block
     e = Entry.new(:inbook)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def incollection &block
     e = Entry.new(:incollection)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def inproceedings &block
     e = Entry.new(:inproceedings)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
   alias conference inproceedings
@@ -181,30 +218,35 @@ module RBib
   def manual &block
     e = Entry.new(:manual)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def mastersthesis &block
     e = Entry.new(:mastersthesis)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def misc &block
     e = Entry.new(:misc)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def proceedings &block
     e = Entry.new(:proceedings)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def phdthesis &block
     e = Entry.new(:phdthesis)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
   alias phd phdthesis
@@ -212,12 +254,14 @@ module RBib
   def techreport &block
     e = Entry.new(:techreport)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
   def unpublished &block
     e = Entry.new(:unpublished)
     e.instance_eval(&block)
+    e.maybe_merge(@@default)
     DB.data << e
   end
 
