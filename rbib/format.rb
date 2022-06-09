@@ -297,7 +297,10 @@ module RBib
   class Format::Longer < Format::Longest
     def self.format entry
       entry.delete(:url) if entry.get(:doi)
-      entry.delete(:editor)
+      case entry._type
+      when :proceedings
+        entry.delete(:editor)
+      end
       return super
     end
 
