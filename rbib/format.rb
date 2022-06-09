@@ -212,9 +212,9 @@ module RBib
       end
 
       add(out, 'isbn', entry.get(:isbn))
-      add(out, 'doi', entry.get(:doi))
+      add(out, 'doi', entry.get(:doi)&.gsub(/(?!\\)_/, '\\_'))
       add(out, 'note', entry.get(:note))
-      add_many(out, 'url', entry.get_all(:url))
+      add_many(out, 'url', entry.get_all(:url).map {|url| url.gsub(/(?!\\)_/, '\\_')})
       add(out, 'year', entry.get(:year))
       out << '}'
       out.join("\n")
