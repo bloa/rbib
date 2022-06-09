@@ -389,7 +389,7 @@ module RBib
     end
   end
 
-  class Format::YAML < Format::Base
+  class Format::YAML < Format::Full
     COMMENT = '#'
 
     def self.print entry
@@ -535,6 +535,37 @@ module RBib
       v.gsub!(/[{}]/, '')
       v.gsub!(/\\&/, '&')
       v[/:/] ? '"%s"'%[v.gsub('"', '\\"')] : v
+    end
+  end
+
+  class Format::YAML2 < Format::YAML
+    def self.format entry
+      case entry._type
+      when :incollection
+        crf = entry.get(:crossref)
+        if crf
+          entry.inherit(crf)
+          entry.delete(:crossref)
+        end
+      when :inproceedings
+        crf = entry.get(:crossref)
+        if crf
+          entry.inherit(crf)
+          entry.delete(:crossref)
+        end
+      when :proceedings
+        entry.delete(:date)
+        entry.delete(:place)
+      end
+      return super
+    end
+
+    def self.print entry
+      case entry._type
+      when :proceedings
+        return
+      end
+      return super
     end
   end
 
