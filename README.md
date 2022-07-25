@@ -72,7 +72,7 @@ article {
 @article{author:2018:jof,
   author    = {Author, Only},
   title     = {Baz in my FooBar?},
-  journal   = {J. F.B.},
+  journal   = {J. FooBar},
   volume    = {3},
   number    = {14},
   pages     = {159--265},
@@ -128,8 +128,8 @@ article {
   author    = {Author, First and
                Author, Last},
   title     = {Alternative News of the {FuTuRe}},
-  booktitle = {Future Arbitrary Knowledge for Education},
-  series    = {Lect. Notes Comput. Sci.},
+  booktitle = {{FAKE} 10},
+  series    = {LNCS},
   volume    = {12345},
   publisher = {Springer},
   pages     = {32--47},
@@ -153,7 +153,7 @@ article {
 @article{author:2018:jof,
   author    = {Author, Only},
   title     = {Baz in my FooBar?},
-  journal   = {Journal of FooBar},
+  journal   = {J. FooBar},
   volume    = {3},
   number    = {14},
   pages     = {159--265},
@@ -170,7 +170,7 @@ article {
                Author, Last},
   title     = {Alternative News of the {FuTuRe}},
   booktitle = {Future Arbitrary Knowledge for Education ({FAKE} 10)},
-  series    = {Lecture Notes in Computer Science},
+  series    = {LNCS},
   volume    = {12345},
   publisher = {Springer},
   pages     = {32--47},
@@ -198,6 +198,7 @@ article {
   volume    = {3},
   number    = {14},
   pages     = {159--265},
+  doi       = {10.1007/JFB-3-14-2},
   year      = {2018},
 }
 
@@ -210,11 +211,12 @@ article {
   author    = {Author, First and
                Author, Last},
   title     = {Alternative News of the {FuTuRe}},
-  booktitle = {Proceedings of the 10th Hypernational Conference on Future Arbitrary Knowledge for Education ({FAKE} 10)},
-  series    = {Lecture Notes in Computer Science},
+  booktitle = {Proceedings of the 10th Hypernational Conference on Future Arbitrary Knowledge for Education, Revised Selected Papers ({FAKE} 10)},
+  series    = {Lect. Notes Comput. Sci.},
   volume    = {12345},
   publisher = {Springer},
   pages     = {32--47},
+  doi       = {10.1007/123-4-56789-0\\_1},
   year      = {2000},
 }
 
@@ -257,7 +259,7 @@ article {
   volume    = {12345},
   publisher = {Springer},
   pages     = {32--47},
-  doi       = {10.1007/123-4-56789-0\_1},
+  doi       = {10.1007/123-4-56789-0\\_1},
   year      = {2000},
 }
 
@@ -295,26 +297,15 @@ article {
   author    = {Author, First and
                Author, Last},
   title     = {Alternative News of the {FuTuRe}},
-  crossref  = {conf/fake/2000},
-  pages     = {32--47},
-  doi       = {10.1007/123-4-56789-0\_1},
-}
-
-
-% ================================================================================
-% Proceedings
-% ================================================================================
-
-@proceedings{conf/fake/2000,
+  booktitle = {Proceedings of the 10th Hypernational Conference on Future Arbitrary Knowledge for Education, Revised Selected Papers ({FAKE} 10)},
   editor    = {First Editor and
                Second Editor and
                Third Editor},
-  title     = {Proceedings of the 10th Hypernational Conference on Future Arbitrary Knowledge for Education, Revised Selected Papers ({FAKE} 10), Anywhere, Earth},
-  booktitle = {Proceedings of the 10th Hypernational Conference on Future Arbitrary Knowledge for Education, Revised Selected Papers ({FAKE} 10), Anywhere, Earth},
   series    = {Lecture Notes in Computer Science},
   volume    = {12345},
   publisher = {Springer},
-  doi       = {10.1007/123-4-56789-0},
+  pages     = {32--47},
+  doi       = {10.1007/123-4-56789-0\\_1},
   year      = {2000},
 }
 
@@ -350,7 +341,7 @@ end
 @article{author:2018:jof,
   author    = {Author, Only},
   title     = {Baz in my FooBar?},
-  journal   = {Journal of FooBar},
+  journal   = {J. FooBar},
   volume    = {3},
   number    = {14},
   pages     = {159--265},
@@ -372,7 +363,7 @@ end
   volume    = {12345},
   publisher = {Springer},
   pages     = {32--47},
-  doi       = {10.1007/123-4-56789-0\_1},
+  doi       = {10.1007/123-4-56789-0\\_1},
   year      = {2000},
 }
 
