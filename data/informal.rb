@@ -28,6 +28,20 @@ article {
 }
 
 article {
+  key 'trofin:2021:corr'
+  title '{MLGO}: {A} Machine Learning Guided Compiler Optimizations Framework'
+  author 'Mircea Trofin',
+         'Yundi Qian',
+         'Eugene Brevdo',
+         'Zinan Lin',
+         'Krzysztof Choromanski',
+         'David Li'
+  fragment 'arxiv-corr'
+  volume 'abs/2101.04808'
+  url 'https://arxiv.org/abs/2101.04808'
+}
+
+article {
   key 'weng:2021:corr'
   title '{UNIT:} Unifying Tensorized Instruction Compilation'
   author 'Jian Weng',

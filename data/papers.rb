@@ -4,11 +4,123 @@
 # ================================================================================
 
 inproceedings {
+  key 'alnajar:2022:gi-gecco'
+  title 'Genetic improvement of shoreline evolution forecasting models'
+  author 'Mahmoud Al Najar',
+         'Rafael Almar',
+         'Erwin W. J. Bergsma',
+         'Jean{-}Marc Delvit',
+         'Dennis G. Wilson'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1916--1923'
+  doi '10.1145/3520304.3534041'
+}
+
+inproceedings {
+  key 'anderson:2022:gi-gecco'
+  title 'Towards evolution-based autonomy in large-scale systems'
+  author 'Damien Anderson',
+         'Paul Harvey',
+         'Yusaku Kaneta',
+         'Petros Papadopoulos',
+         'Philip Rodgers',
+         'Marc Roper'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1924--1925'
+  doi '10.1145/3520304.3533975'
+}
+
+inproceedings {
   key 'blot:2022:roadef'
   title 'Using Genetic Improvement to Optimise Optimisation Algorithm Implementations'
   author 'Aymeric Blot',
          'Justyna Petke'
   crossref 'conf/roadef/2022'
+}
+
+inproceedings {
+  key 'bruce:2022:gi-gecco'
+  author 'Bobby R. Bruce'
+  title 'Automatically exploring computer system design spaces'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1926--1927'
+  doi '10.1145/3520304.3534021'
+}
+
+inproceedings {
+  key 'chuengsatiansup:2022:gi-gecco'
+  title 'Opportunities for genetic improvement of cryptographic code'
+  author 'Chitchanok Chuengsatiansup',
+         'Markus Wagner',
+         'Yuval Yarom'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1928--1929'
+  doi '10.1145/3520304.3534049'
+}
+
+inproceedings {
+  key 'krauss:2022:gi-gecco'
+  title '{Amaru}: {A} framework for combining genetic improvement with pattern mining'
+  author 'Oliver Krauss'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1930--1937'
+  doi '10.1145/3520304.3534016'
+}
+
+inproceedings {
+  key 'li:2022:gi-gecco'
+  title 'Genetic improvement in the shackleton framework for optimizing {LLVM} pass sequences'
+  author 'Shuyue Stella Li',
+         'Hannah Peeler',
+         'Andrew N. Sloss',
+         'Kenneth N. Reid',
+         'Wolfgang Banzhaf'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1938--1939'
+  doi '10.1145/3520304.3534000'
+}
+
+inproceedings {
+  key 'licorish:2022:gi-gecco'
+  title 'Dissecting copy/delete/replace/swap mutations'
+  subtitle 'Insights from a {GIN} case study'
+  author 'Sherlock A. Licorish',
+         'Markus Wagner'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1940--1945'
+  doi '10.1145/3520304.3533970'
+}
+
+inproceedings {
+  key 'murphy:2022:gi-gecco'
+  title 'The case for grammatical evolution in test generation'
+  author 'Aidan Murphy',
+         'Thomas Laurent',
+         'Anthony Ventresque'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1946--1947'
+  doi '10.1145/3520304.3534042'
+}
+
+inproceedings {
+  key 'zhang:2022:gi-gecco'
+  title 'Leveraging fuzzy system to reduce uncertainty of decision making in software engineering automation'
+  author 'Yueke Zhang',
+         'Yu Huang'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1948--1949'
+  doi '10.1145/3520304.3533991'
+}
+
+inproceedings {
+  key 'zhong:2022:gi-gecco'
+  title '{Py2Cy}: {A} genetic improvement tool to speed up {P}ython'
+  author 'James Zhong',
+         'Max Hort',
+         'Federica Sarro'
+  crossref 'workshop/gi@gecco/2022'
+  pages '1950--1955'
+  doi '10.1145/3520304.3534037'
 }
 
 inproceedings {
