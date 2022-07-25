@@ -553,6 +553,19 @@ module RBib
           entry.inherit(crf)
           entry.delete(:crossref)
         end
+        tmp = entry.get(:booktitle)
+        tmp = tmp.gsub(/\s*#{entry.get(:year)}/, '')
+        # tmp = tmp.gsub(/\s*proceedings( of)?( the)?/i, '')
+        # tmp = tmp.gsub(/^\s*\d+(st|nd|rd|th)/, '')
+        if tmp['(']
+          # tmp = tmp.gsub(/\s*\(.*\)/, '')
+          tmp = tmp.gsub(/.*\(/, '')
+          tmp = tmp.gsub(/\).*/, '')
+          tmp = tmp.gsub(/ in .*/, '')
+          tmp = tmp.gsub(/\s+\d+$/, '')
+          tmp = tmp.gsub(/\s+\{?[XVI]+\}?$/, '')
+        end
+        entry.update(:booktitle, tmp.strip)
       when :proceedings
         entry.delete(:date)
         entry.delete(:place)
