@@ -18,12 +18,17 @@ File.open('README.md', 'w') do |out|
   out.puts ''
 
   [
+    RBib::Format::Atomic,
     RBib::Format::Shortest,
     RBib::Format::Shorter,
     RBib::Format::Short,
+    RBib::Format::Medium,
     RBib::Format::Long,
     RBib::Format::Longer,
     RBib::Format::Longest,
+    RBib::Format::Full,
+    RBib::Format::YAML,
+    RBib::Format::YAML2
   ].each do |format|
     RBib::DB.restore
     out.puts '## %s'%[format]
