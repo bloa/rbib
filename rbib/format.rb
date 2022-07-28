@@ -276,6 +276,7 @@ module RBib
         crf = entry.get(:crossref)
         if crf
           entry.inherit(crf)
+          entry.delete(:isbn)
           entry.delete(:crossref)
         end
       when :proceedings
@@ -315,7 +316,7 @@ module RBib
 
   class Format::Long < Format::Longer
     def self.format entry
-      entry.delete(:isbn)
+      entry.delete(:isbn) if entry.get(:doi)
       entry.delete(:organization)
       entry.update(:series, entry.get(:series_short))
       entry.update(:institution, entry.get(:institution_short))
@@ -342,6 +343,7 @@ module RBib
 
   class Format::Short < Format::Medium
     def self.format entry
+      entry.delete(:isbn)
       entry.delete(:doi)
       entry.delete(:url) # again, even without doi
       entry.update(:series, entry.get(:series_abbrv))
