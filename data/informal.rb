@@ -1,5 +1,21 @@
 # coding: utf-8
 # ================================================================================
+# 2022
+# ================================================================================
+
+default { year 2022 }
+
+article {
+  key 'blot:2022:corr_1'
+  title '{MAGPIE:} {M}achine Automated General Performance Improvement via Evolution of Software'
+  author 'Aymeric Blot',
+         'Justyna Petke'
+  fragment 'arxiv-corr'
+  volume 'abs/2208.02811'
+  url 'https://arxiv.org/abs/2208.02811'
+}
+
+# ================================================================================
 # 2021
 # ================================================================================
 
