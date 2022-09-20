@@ -9,6 +9,18 @@ fragment {
 }
 
 proceedings {
+  key 'workshop/apr@icse/2022'
+  fragment 'workshop/apr'
+  title_short 'APR@ICSE 2022'
+  title_prefix 'Proceedings of the 3rd International Workshop on'
+  publisher '{IEEE}'
+  isbn '978-1-4503-9285-3'
+  place 'Pittsburgh, PA, USA'
+  date 'May 19, 2022'
+  year 2022
+}
+
+proceedings {
   key 'workshop/apr@icse/2021'
   fragment 'workshop/apr'
   title_short 'APR@ICSE 2021'
@@ -655,13 +667,20 @@ proceedings {
 
 
 # ================================================================================
-# NIDISC
+# NEWK
 # ================================================================================
 
-fragment {
-  key 'workshop/nidisc'
-  title 'Nature Inspired Distributed Computing'
+proceedings {
+  key 'workshop/newk@gecco/2020'
+  inherit 'conf/gecco/2020/comp'
+  update(:title_prefix, 'International Workshop on NeuroEvolution@Work, %s'%get(:title_prefix))
+  update(:title_short, 'NEWK@GECCO 2020 in %s'%get(:title_short))
 }
+
+
+# ================================================================================
+# NIDISC
+# ================================================================================
 
 proceedings {
   key 'workshop/nidisc@ipdps/2013'
@@ -935,6 +954,24 @@ proceedings {
   year 2015
 }
 
+# ================================================================================
+# SMGP
+# ================================================================================
+
+fragment {
+  key 'workshop/smgp'
+  title 'Semantic Methods in Genetic Programming'
+}
+
+proceedings {
+  key 'workshop/smgp@ppsn/2014'
+  fragment 'workshop/smgp'
+  title_short '{SMGP@PPSN} 2014'
+  place 'Ljubljana, Slovenia'
+  date 'September 13, 2014'
+  year 2014
+}
+
 
 # ================================================================================
 # UCHPC-MAW
@@ -950,7 +987,7 @@ fragment {
 proceedings {
   key 'workshop/uchpc-maw/2009'
   fragment 'workshop/uchpc-maw'
-  title_short 'UCHPC-MAW@CF 2009'
+  title_short '{UCHPC-MAW@CF} 2009'
   place 'Ischia, Italy'
   year 2009
 }

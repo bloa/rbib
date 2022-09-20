@@ -1477,6 +1477,19 @@ proceedings {
 }
 
 proceedings {
+  key 'conf/eurogp/2015'
+  fragment 'conf/eurogp'
+  title_prefix 'Proceedings of the 17th'
+  editor 'Penousal Machado', 'Malcolm I. Heywood', 'James McDermott', 'Mauro Castelli', 'Pablo García{-}Sánchez', 'Paolo Burelli', 'Sebastian Risi', 'Kevin Sim'
+  volume 9025
+  isbn '978-3-319-16500-4'
+  doi '10.1007/978-3-319-16501-1'
+  place 'Copenhagen, Denmark'
+  date 'April 8--10, 2015'
+  year 2015
+}
+
+proceedings {
   key 'conf/eurogp/2014'
   fragment 'conf/eurogp'
   title_prefix 'Proceedings of the 17th'
@@ -3409,6 +3422,26 @@ proceedings {
 
 
 # ================================================================================
+# IISWC
+# ================================================================================
+
+fragment {
+  key 'conf/iiswc'
+  title 'Workload Characterization'
+  title_short (promise {'{IISWC} %s'%(get(:year))})
+  title_prefix (promise {'Proceedings of the %s International Symposium on'%(get(:year))})
+  publisher '{IEEE}'
+}
+
+proceedings {
+  key 'conf/iiswc/2022'
+  fragment 'conf/iiswc'
+  date 'November 6--8, 2022'
+  year 2022
+}
+
+
+# ================================================================================
 # IIT
 # ================================================================================
 
@@ -3522,6 +3555,17 @@ fragment {
   title 'International Parallel Processing Symposium / Symposium on Parallel and Distributed Processing'
   title_short (promise {'{IPPS/SPDP} %s'%(get(:year))})
   publisher '{IEEE}'
+}
+
+proceedings {
+  key 'conf/ipdps/2021'
+  fragment 'conf/ipdps'
+  title_prefix 'Proceedings of the 35th {IEEE}'
+  doi '10.1109/IPDPS49936.2021'
+  isbn '978-1-6654-4066-0'
+  place 'Portland, OR, USA'
+  date 'May 17--21, 2021'
+  year 2021
 }
 
 proceedings {
@@ -4352,7 +4396,18 @@ fragment {
   key 'conf/msr'
   title 'Mining Software Repositories'
   title_short (promise {'{MSR} %s'%(get(:year))})
-  publisher '{IEEE/ACM}'
+}
+
+proceedings {
+  key 'conf/msr/2021'
+  fragment 'conf/msr'
+  title_prefix 'Proceedings of the 18th {IEEE/ACM} International Conference on'
+  doi '10.1109/MSR52588.2021'
+  isbn '978-1-7281-8710-5'
+  publisher '{IEEE}'
+  place 'Madrid, Spain'
+  date 'May 17--19, 2021'
+  year 2021
 }
 
 proceedings {
@@ -4360,6 +4415,7 @@ proceedings {
   fragment 'conf/msr'
   title_prefix 'Proceedings of the 16th International Conference on'
   editor 'Margaret{-}Anne D. Storey', 'Bram Adams', 'Sonia Haiduc'
+  publisher '{IEEE/ACM}'
   isbn '978-1-7281-3412-3'
   place 'Montreal, QC, Canada'
   date 'May 26--27, 2019'
@@ -5381,6 +5437,28 @@ proceedings {
 
 
 # ================================================================================
+# SIGCSE
+# ================================================================================
+
+fragment {
+  key 'conf/sigcse'
+  title 'Computer Science Education'
+  title_short (promise {'{SIGCSE} %s'%(get(:year))})
+  publisher '{ACM}'
+}
+
+proceedings {
+  key 'conf/sigcse/2020'
+  fragment 'conf/sigcse'
+  title_prefix 'Proceedings of the 51st {ACM} Technical Symposium on'
+  editor 'Jian Zhang', 'Mark Sherriff', 'Sarah Heckman', 'Pamela A. Cutter', 'Alvaro E. Monge'
+  place 'Portland, OR, USA'
+  date 'March 11--14, 2020'
+  year 2020
+}
+
+
+# ================================================================================
 # SoftCOM
 # ================================================================================
 
@@ -5509,7 +5587,6 @@ proceedings {
   key 'conf/ssbse/2018'
   fragment 'conf/ssbse'
   title_prefix 'Proceedings of the 10th'
-  title_short '{SSBSE} 2018'
   editor 'Thelma Elita Colanzi', 'Phil McMinn'
   volume 11036
   isbn '978-3-319-99240-2'
@@ -5523,7 +5600,6 @@ proceedings {
   key 'conf/ssbse/2017'
   fragment 'conf/ssbse'
   title_prefix 'Proceedings of the 9th'
-  title_short '{SSBSE} 2017'
   editor 'Tim Menzies', 'Justyna Petke'
   volume 10452
   isbn '978-3-319-66298-5'
@@ -5537,7 +5613,6 @@ proceedings {
   key 'conf/ssbse/2016'
   fragment 'conf/ssbse'
   title_prefix 'Proceedings of the 8th'
-  title_short '{SSBSE} 2016'
   editor 'Federica Sarro', 'Kalyanmoy Deb'
   volume 9962
   isbn '978-3-319-47105-1'
@@ -5551,7 +5626,6 @@ proceedings {
   key 'conf/ssbse/2015'
   fragment 'conf/ssbse'
   title_prefix 'Proceedings of the 7th'
-  title_short '{SSBSE} 2015'
   editor 'Márcio de Oliveira Barros', 'Yvan Labiche'
   volume 9275
   doi '10.1007/978-3-319-22183-0'
@@ -5559,6 +5633,19 @@ proceedings {
   place 'Bergamo, Italy'
   date 'September 5--7, 2015'
   year 2015
+}
+
+proceedings {
+  key 'conf/ssbse/2014'
+  fragment 'conf/ssbse'
+  title_prefix 'Proceedings of the 6th'
+  editor 'Claire {Le Goues}', 'Shin Yoo'
+  volume 8636
+  doi '10.1007/978-3-319-09940-8'
+  isbn '978-3-319-09939-2'
+  place 'Fortaleza, Brazil'
+  date 'August 26--29, 2014'
+  year 2014
 }
 
 proceedings {

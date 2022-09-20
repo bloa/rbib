@@ -23,6 +23,17 @@ article {
 }
 
 article {
+  key 'soto-valero:2022:tsem'
+  title 'Coverage-Based Debloating for Java Bytecode'
+  author 'César Soto{-}Valero',
+         'Thomas Durieux',
+         'Nicolas Harrand',
+         'Benoit Baudry'
+  fragment 'journal/acm-tsem'
+  doi '10.1145/3546948'
+}
+
+article {
   key 'georgiou:2022:cj'
   title 'Lost In Translation: Exposing Hidden Compiler Optimization Opportunities'
   author 'Kyriakos Georgiou',
@@ -826,6 +837,18 @@ article {
 }
 
 article {
+  key 'kocsis:2018:jar'
+  title 'Genetic Programming + Proof Search = Automatic Improvement'
+  author 'Zoltan A. Kocsis',
+         'Jerry Swan'
+  fragment 'journal/jar'
+  volume 60
+  number 2
+  pages '157--176'
+  doi '10.1007/s10817-017-9409-5'
+}
+
+article {
   key 'li:2018:cybersec'
   title 'Fuzzing: {A} survey'
   author 'Jun Li',
@@ -905,6 +928,19 @@ article {
   volume 44
   number 6
   pages '574--594'
+}
+
+article {
+  key 'seidel:2018:jfp'
+  title 'Dynamic witnesses for static type errors'
+  subtitle '(or, Ill-Typed Programs Usually Go Wrong)'
+  author 'Eric L. Seidel',
+         'Ranjit Jhala',
+         'Westley Weimer'
+  fragment 'journal/jfp'
+  volume 28
+  pages 'e13'
+  doi '10.1017/S0956796818000126'
 }
 
 article {

@@ -90,6 +90,8 @@ RBib::DB.data.each do |entry|
          /^\d+:\d+(--\d+)?$/,
          /^\d+:\d+(--\d+:\d+)?$/
       nil
+    when /^\w\d+$/ # ???
+      nil
     else
       fail 'strange pages (%s)'%key
     end

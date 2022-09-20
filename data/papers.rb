@@ -59,6 +59,18 @@ inproceedings {
 }
 
 inproceedings {
+  key 'endres:2022:apr-icse'
+  title 'What Can Program Repair Learn From Code Review?'
+  author 'Madeline Endres',
+         'Pemma Reiter',
+         'Stephanie Forrest',
+         'Westley Weimer'
+  crossref 'workshop/apr@icse/2022'
+  pages '33--37'
+  doi '10.1145/3524459.3527352'
+}
+
+inproceedings {
   key 'krauss:2022:gi-gecco'
   title '{Amaru}: {A} framework for combining genetic improvement with pattern mining'
   author 'Oliver Krauss'
@@ -89,6 +101,17 @@ inproceedings {
   crossref 'workshop/gi@gecco/2022'
   pages '1940--1945'
   doi '10.1145/3520304.3533970'
+}
+
+inproceedings {
+  key 'liou:2022:iiswc'
+  title 'Understanding the Power of Evolutionary Computation for GPU Code Optimization'
+  author 'Jhe{-}Yu Liou',
+         'Muaaz Awan',
+         'Steven Hofmeyr',
+         'Stephanie Forrest',
+         'Carole{-}Jean Wu'
+  crossref 'conf/iiswc/2022'
 }
 
 inproceedings {
@@ -298,6 +321,17 @@ inproceedings {
 }
 
 inproceedings {
+  key 'durieux:2021:msr'
+  title 'Duets: {A} Dataset of Reproducible Pairs of {J}ava Library-Clients'
+  author 'Thomas Durieux',
+         'César Soto{-}Valero',
+         'Benoit Baudry'
+  crossref 'conf/msr/2021'
+  pages '545--549'
+  doi '10.1109/MSR52588.2021.00071'
+}
+
+inproceedings {
   key 'guizzo:2021:ssbse'
   title 'Refining Fitness Functions for Search-Based Automated Program Repair'
   subtitle 'A Case Study with {ARJA} and {ARJA-e}'
@@ -357,6 +391,17 @@ inproceedings {
   crossref 'conf/ics/2021'
   pages '1--12'
   doi '10.1145/3447818.3461665'
+}
+
+inproceedings {
+  key 'renzullo:ipdps:2021'
+  title 'Multiplicative Weights Algorithms for Parallel Automated Software Repair'
+  author 'Joseph Renzullo',
+         'Westley Weimer',
+         'Stephanie Forrest'
+  crossref 'conf/ipdps/2021'
+  pages '984--993'
+  doi '10.1109/IPDPS49936.2021.00107'
 }
 
 inproceedings {
@@ -558,6 +603,22 @@ inproceedings {
 }
 
 inproceedings {
+  key 'cosman:2020:sigcse'
+  title '{PABLO:} Helping Novices Debug {P}ython Code Through Data-Driven Fault Localization'
+  author 'Benjamin Cosman',
+         'Madeline Endres',
+         'Georgios Sakkas',
+         'Leon Medvinsky',
+         'Yao{-}Yuan Yang',
+         'Ranjit Jhala',
+         'Kamalika Chaudhuri',
+         'Westley Weimer'
+  crossref 'conf/sigcse/2020'
+  pages '1047--1053'
+  doi '10.1145/3328778.3366860'
+}
+
+inproceedings {
   key 'duan:2020:secdev'
   title 'Refactoring the {FreeBSD} Kernel with Checked {C}'
   author 'Junhan Duan',
@@ -600,6 +661,21 @@ inproceedings {
   crossref 'conf/hipc/2020'
   pages '294--304'
   doi '10.1109/HiPC50609.2020.00043'
+}
+
+inproceedings {
+  key 'huang:2020:fse'
+  title 'Biases and differences in code review using medical imaging and eye-tracking'
+  subtitle 'genders, humans, and machines'
+  author 'Yu Huang',
+         'Kevin Leach',
+         'Zohreh Sharafi',
+         'Nicholas McKay',
+         'Tyler Santander',
+         'Westley Weimer'
+  crossref 'conf/fse/2020'
+  pages '456--468'
+  doi '10.1145/3368089.3409681'
 }
 
 inproceedings {
@@ -693,13 +769,13 @@ inproceedings {
 }
 
 inproceedings {
-  key 'liou:2020:gecco-comp'
+  key 'liou:2020:newk-gecco'
   title '{GEVO-ML}: a proposal for optimizing {ML} code with evolutionary computation'
   author 'Jhe{-}Yu Liou',
          'Xiaodong Wang',
          'Stephanie Forrest',
          'Carole{-}Jean Wu'
-  crossref 'conf/gecco/2020/comp'
+  crossref 'workshop/newk@gecco/2020'
   pages '1849--1856'
   doi '10.1145/3377929.3398139'
 }
@@ -828,6 +904,19 @@ inproceedings {
   crossref 'conf/hpcasia/2020'
   pages '199--206'
   doi '10.1145/3368474.3368492'
+}
+
+inproceedings {
+  key 'sakkas:2020:pldi'
+  title 'Type error feedback via analytic program repair'
+  author 'Georgios Sakkas',
+         'Madeline Endres',
+         'Benjamin Cosman',
+         'Westley Weimer',
+         'Ranjit Jhala'
+  crossref 'conf/pldi/2020'
+  pages '16--30'
+  doi '10.1145/3385412.3386005'
 }
 
 inproceedings {
@@ -1124,6 +1213,19 @@ inproceedings {
   crossref 'conf/fse/2019'
   pages '302--313'
   doi '10.1145/3338906.3338911'
+}
+
+inproceedings {
+  key 'endres:2019:ase'
+  title '{InFix}: {A}utomatically Repairing Novice Program Inputs'
+  author 'Madeline Endres',
+         'Georgios Sakkas',
+         'Benjamin Cosman',
+         'Ranjit Jhala',
+         'Westley Weimer'
+  crossref 'conf/ase/2019'
+  pages '399--410'
+  doi '10.1109/ASE.2019.00045'
 }
 
 inproceedings {
@@ -3549,6 +3651,16 @@ inproceedings {
 }
 
 inproceedings {
+  key 'swan:2015:eurogp'
+  title '{T}emplar -- {A} Framework for Template-Method Hyper-Heuristics'
+  author 'Jerry Swan',
+         'Nathan Burles'
+  crossref 'conf/eurogp/2015'
+  pages '205--216'
+  doi '10.1007/978-3-319-16501-1\_17'
+}
+
+inproceedings {
   key 'umeda:2015:lcpc'
   title 'Multigrain Parallelization for Model-Based Design Applications Using the {OSCAR} Compiler'
   author 'Dan Umeda',
@@ -3749,6 +3861,29 @@ inproceedings {
   crossref 'conf/lctes/2014'
   pages '85--94'
   doi '10.1145/2597809.2597811'
+}
+
+inproceedings {
+  key 'kocsis:2014:smgp-ppsn'
+  title 'Asymptotic Genetic Improvement Programming via Type Functors and Catamorphisms'
+  author 'Zoltan A. Kocsis',
+         'Jerry Swan'
+  crossref 'workshop/smgp@ppsn/2014'
+}
+
+inproceedings {
+  key 'kocsis:2014:ssbse'
+  title 'Repairing and Optimizing Hadoop hashCode Implementations'
+  author 'Zoltan A. Kocsis',
+         'Geoffrey Neumann',
+         'Jerry Swan',
+         'Michael G. Epitropakis',
+         'Alexander E. I. Brownlee',
+         'Saemundur O. Haraldsson',
+         'Edward Bowles'
+  crossref 'conf/ssbse/2014'
+  pages '259--264'
+  doi '10.1007/978-3-319-09940-8\_22'
 }
 
 inproceedings {

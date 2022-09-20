@@ -141,9 +141,21 @@ fragment {
 }
 
 fragment {
+  key 'journal/jar'
+  journal 'Journal of Automated Reasoning'
+  journal_short 'J. Autom. Reason.'
+}
+
+fragment {
   key 'journal/jebs'
   journal 'Journal of Educational and Behavioral Statistics'
   journal_short 'J. Educ. Behav. Stat.'
+}
+
+fragment {
+  key 'journal/jfp'
+  journal 'Journal of Functional Programming'
+  journal_short 'J. Funct. Program.'
 }
 
 fragment {
