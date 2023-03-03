@@ -1,4 +1,32 @@
 # coding: utf-8
+
+# ================================================================================
+# 2022
+# ================================================================================
+
+default { year 2022 }
+
+article {
+  key 'blot:2022:corr_2'
+  title 'A Comprehensive Survey of Benchmarks for Automated Improvement of Software\'s Non-Functional Properties'
+  author 'Aymeric Blot',
+         'Justyna Petke'
+  fragment 'arxiv-corr'
+  volume 'abs/2212.08540'
+  url 'https://arxiv.org/abs/2212.08540'
+}
+
+article {
+  key 'blot:2022:corr_1'
+  title '{MAGPIE}: {M}achine Automated General Performance Improvement via Evolution of Software'
+  author 'Aymeric Blot',
+         'Justyna Petke'
+  fragment 'arxiv-corr'
+  volume 'abs/2208.02811'
+  url 'https://arxiv.org/abs/2208.02811'
+}
+
+
 # ================================================================================
 # 2022
 # ================================================================================
@@ -119,6 +147,30 @@ article {
   fragment 'arxiv-corr'
   volume 'abs/2012.12700'
   url 'https://arxiv.org/abs/2012.12700'
+}
+
+article {
+  key 'langdon:2020:corr_2'
+  title 'Genetic Improvement @ ICSE 2020'
+  author 'William B. Langdon',
+         'Westley Weimer',
+         'Justyna Petke',
+         'Erik Fredericks',
+         'Seongmin Lee',
+         'Emily Winter',
+         'Michail Basios',
+         'Myra B. Cohen',
+         'Aymeric Blot',
+         'Markus Wagner',
+         'Bobby R. Bruce',
+         'Shin Yoo',
+         'Simos Gerasimou',
+         'Oliver Krauss',
+         'Yu Huang',
+         'Michael Gerten'
+  fragment 'arxiv-corr'
+  volume 'abs/2007.15987'
+  url 'https://arxiv.org/abs/2007.15987'
 }
 
 article {
@@ -249,13 +301,43 @@ default { year 2014 }
 
 techreport {
   key 'swan:2014:tr'
-  author 'Jerry Swan', 'Michael G. Epitropakis', 'John R. Woodward'
-  title '{Gen-O-Fix:} An embeddable framework for Dynamic Adaptive Genetic Improvement Programming'
+  title '{Gen-O-Fix:} {A}n embeddable framework for Dynamic Adaptive Genetic Improvement Programming'
+  author 'Jerry Swan',
+         'Michael G. Epitropakis',
+         'John R. Woodward'
   institution 'Computing Science and Mathematics, University of Stirling'
   institution_short 'University of Stirling'
   number 'CSM-195'
-  year 2014
 }
 
 
+# ================================================================================
+# 2013
+# ================================================================================
 
+default { year 2013 }
+
+techreport {
+  key 'marmion:2013:corr'
+  title 'Neutrality in the Graph Coloring Problem'
+  author 'Marie{-}Éléonore Marmion',
+         'Aymeric Blot',
+         'Laetitia Jourdan',
+         'Clarisse Dhaenens'
+  fragment 'arxiv-corr'
+  volume 'abs/1301.6092'
+  url 'https://arxiv.org/abs/1301.6092'
+}
+
+techreport {
+  key 'marmion:2013:inria'
+  title 'Neutrality in the Graph Coloring Problem'
+  author 'Marie{-}Éléonore Marmion',
+         'Aymeric Blot',
+         'Laetitia Jourdan',
+         'Clarisse Dhaenens'
+  institution 'Rapport de Recherche INRIA'
+  institution_short 'INRIA'
+  number 'RR-8215'
+  url 'https://hal.inria.fr/hal-00781001'
+}

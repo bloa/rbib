@@ -84,6 +84,8 @@ RBib::DB.data.each do |entry|
   # Pages
   if pages = entry.get(:pages)
     case pages
+    when /^\w\d+$/
+      nil
     when /^\d+-\d+$/
       fail 'two dashes in pages (%s)'%key
     when /^\d+(--\d+)?$/,

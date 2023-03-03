@@ -743,6 +743,18 @@ fragment {
 }
 
 proceedings {
+  key 'conf/cf/2019'
+  fragment 'conf/cf'
+  editor 'Francesca Palumbo', 'Michela Becchi', 'Martin Schulz', 'Kento Sato'
+  title_prefix 'Proceedings of the 16th {ACM} International Conference on'
+  doi '10.1145/3310273'
+  isbn '978-1-4503-6685-4'
+  place 'Alghero, Italy'
+  date 'April 30 -- May 2, 2019'
+  year 2019
+}
+
+proceedings {
   key 'conf/cf/2018'
   fragment 'conf/cf'
   title_prefix 'Proceedings of the 15th {ACM} International Conference on'
@@ -768,7 +780,7 @@ proceedings {
 proceedings {
   key 'conf/cf/2012'
   fragment 'conf/cf'
-  title_prefix 'Proceedings of the 13th {ACM} International Conference on'
+  title_prefix 'Proceedings of the 9th {ACM} International Conference on'
   editor 'John Feo', 'Paolo Faraboschi', 'Oreste Villa'
   isbn '978-1-4503-1215-8'
   place 'Caligari, Italy'
@@ -1435,6 +1447,15 @@ fragment {
   title 'European Conference on Genetic Programming'
   title_short (promise {'{EuroGP} %s'%(get(:year))})
   fragment 'series/springer-lncs'
+}
+
+proceedings {
+  key 'conf/eurogp/2023'
+  fragment 'conf/eurogp'
+  title_prefix 'Proceedings of the 26th'
+  place 'Brno, Czech Republic'
+  date 'April 12--14, 2023'
+  year 2023
 }
 
 proceedings {
@@ -2108,7 +2129,7 @@ fragment {
   key 'conf/hais'
   title 'Hybrid Artificial Intelligent Systems'
   title_short (promise {'{HAIS} %s'%(get(:year))})
-  publisher '{Springer}'
+  fragment 'series/springer-lnns'
 }
 
 proceedings {
@@ -2119,6 +2140,27 @@ proceedings {
   place 'Bilbao, Spain'
   date 'June 22--24, 2015'
   year 2015
+}
+
+
+# ================================================================================
+# HIS
+# ================================================================================
+
+fragment {
+  key 'conf/his'
+  title 'Hybrid Intelligent Systems'
+  title_short (promise {'{HIS} %s'%(get(:year))})
+  publisher '{Springer}'
+}
+
+proceedings {
+  key 'conf/his/2021'
+  fragment 'conf/his'
+  title_prefix 'Proceedings of the 21st International Conference on'
+  editor 'Ajith Abraham', 'Patrick Siarry', 'Vincenzo Piuri', 'Niketa Gandhi', 'Gabriella Casalino', 'Oscar Castillo', 'Patrick Hung'
+  date 'December 14--16, 2021'
+  year 2021
 }
 
 
@@ -2323,34 +2365,6 @@ proceedings {
   place 'Barcelona, Spain'
   date 'March 6--7, 2009'
   year 2009
-}
-
-
-# ================================================================================
-# ICCS
-# ================================================================================
-
-fragment {
-  key 'conf/iccs'
-  title 'Computational Science'
-  title_short (promise {'{ICCS} %s'%(get(:year))})
-  title_prefix (promise {'Proceedings of the %s International Conference on'%(get(:year))})
-  series 'Procedia Computer Science'
-  publisher '{Elsevier}'
-}
-
-proceedings {
-  key 'conf/iccs/2013'
-  fragment 'conf/iccs'
-  editor 'Vassil N. Alexandrov',
-         'Michael Lees',
-         'Valeria V. Krzhizhanovskaya',
-         'Jack J. Dongarra',
-         'Peter M. A. Sloot'
-  volume 18
-  place 'Barcelona, Spain'
-  date 'June 5--7, 2013'
-  year 2013
 }
 
 
@@ -2587,6 +2601,48 @@ proceedings {
   doi '10.1109/ICCRD51685.2021'
   date 'January 5--7, 2021'
   year 2021
+}
+
+
+# ================================================================================
+# ICCS
+# ================================================================================
+
+fragment {
+  key 'conf/iccs'
+  title 'Computational Science'
+  title_short (promise {'{ICCS} %s'%(get(:year))})
+  title_prefix (promise {'Proceedings of the %s International Conference on'%(get(:year))})
+}
+
+proceedings {
+  key 'conf/iccs/2020-2'
+  fragment 'conf/iccs'
+  title_suffix 'Part {II}'
+  editor 'Valeria V. Krzhizhanovskaya', 'Gábor Závodszky', 'Michael Harold Lees', 'Jack J. Dongarra', 'Peter M. A. Sloot', 'Sérgio Brissos', 'João Teixeira'
+  fragment 'series/springer-lncs'
+  volume 12138
+  doi '10.1007/978-3-030-50417-5'
+  isbn '978-3-030-50416-8'
+  place 'Amsterdam, The Netherlands'
+  date 'June 3--5, 2020'
+  year 2020
+}
+
+proceedings {
+  key 'conf/iccs/2013'
+  fragment 'conf/iccs'
+  editor 'Vassil N. Alexandrov',
+         'Michael Lees',
+         'Valeria V. Krzhizhanovskaya',
+         'Jack J. Dongarra',
+         'Peter M. A. Sloot'
+  series 'Procedia Computer Science'
+  publisher '{Elsevier}'
+  volume 18
+  place 'Barcelona, Spain'
+  date 'June 5--7, 2013'
+  year 2013
 }
 
 
@@ -3260,6 +3316,31 @@ proceedings {
 
 
 # ================================================================================
+# ICSR
+# ================================================================================
+
+fragment {
+  key 'conf/icsr'
+  title 'International Conference on Software and Systems Reuse'
+  title_short (promise {'{ICSR} %s'%(get(:year))})
+  fragment 'series/springer-lncs'
+}
+
+proceedings {
+  key 'conf/icsr/2022'
+  fragment 'conf/icsr'
+  title_prefix 'Proceedings of the 20th'
+  editor 'Gilles Perrouin', 'Naouel Moha', 'Abdelhak{-}Djamel Seriai'
+  volume 13297
+  doi '10.1007/978-3-031-08129-3'
+  isbn '978-3-031-08128-6'
+  place 'Montpellier, France'
+  date 'June 15--17, 2022'
+  year 2022
+}
+
+
+# ================================================================================
 # ICST
 # ================================================================================
 
@@ -3427,9 +3508,9 @@ proceedings {
 
 fragment {
   key 'conf/iiswc'
-  title 'Workload Characterization'
+  title 'International Symposium on Workload Characterization'
   title_short (promise {'{IISWC} %s'%(get(:year))})
-  title_prefix (promise {'Proceedings of the %s International Symposium on'%(get(:year))})
+  title_prefix (promise {'Proceedings of the %s'%(get(:year))})
   publisher '{IEEE}'
 }
 
@@ -4414,6 +4495,7 @@ proceedings {
   key 'conf/msr/2019'
   fragment 'conf/msr'
   title_prefix 'Proceedings of the 16th International Conference on'
+  publisher '{IEEE/ACM}'
   editor 'Margaret{-}Anne D. Storey', 'Bram Adams', 'Sonia Haiduc'
   publisher '{IEEE/ACM}'
   isbn '978-1-7281-3412-3'
@@ -5395,6 +5477,28 @@ proceedings {
 
 
 # ================================================================================
+# SIGCSE
+# ================================================================================
+
+fragment {
+  key 'conf/sigcse'
+  title 'Computer Science Education'
+  title_short (promise {'{SIGCSE} %s'%(get(:year))})
+  publisher '{ACM}'
+}
+
+proceedings {
+  key 'conf/sigcse/2020'
+  fragment 'conf/sigcse'
+  title_prefix 'Proceedings of the 51st {ACM} Technical Symposium on'
+  editor 'Jian Zhang', 'Mark Sherriff', 'Sarah Heckman', 'Pamela A. Cutter', 'Alvaro E. Monge'
+  place 'Portland, OR, USA'
+  date 'March 11--14, 2020'
+  year 2020
+}
+
+
+# ================================================================================
 # SIGMETRICS
 # ================================================================================
 
@@ -5736,6 +5840,31 @@ proceedings {
   date 'August 14--16, 2019'
   year 2019
 }
+
+
+# ================================================================================
+# VAMOS
+# ================================================================================
+
+fragment {
+  key 'conf/vamos'
+  title 'Variability Modelling of Software-Intensive Systems'
+  title_short (promise {'{VaMoS} %s'%(get(:year))})
+  publisher '{ACM}'
+}
+
+proceedings {
+  key 'conf/vamos/2023'
+  fragment 'conf/vamos'
+  title_prefix 'Proceedings of the 17th International Working Conference on'
+  editor 'Myra B. Cohen', 'Thomas Thüm', 'Jacopo Mauro'
+  doi '10.1145/3571788'
+  place 'Odense, Denmark'
+  date 'January 25--27, 2023'
+  year 2023
+}
+
+# < 2022 see workshop/vamos
 
 
 # ================================================================================

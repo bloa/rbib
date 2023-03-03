@@ -1,4 +1,33 @@
 # coding: utf-8
+
+# ================================================================================
+# 2023
+# ================================================================================
+
+inproceedings {
+  key 'acher:2023:vamos'
+  title 'A Call for Removing Variability'
+  author 'Mathieu Acher',
+         'Luc Lesoil',
+         'Georges Aaron Randrianaina',
+         'Xhevahire Tërnava',
+         'Olivier Zendra'
+  crossref 'conf/vamos/2023'
+  pages '82--84'
+  doi '10.1145/3571788.3571801'
+}
+
+inproceedings {
+  key 'langdon:2023:eurogp'
+  title 'Genetic Improvement of LLVM Intermediate Representation'
+  author 'William B. Langdon',
+         'Afnan Al{-}Subaihin',
+         'Aymeric Blot',
+         'David Clark'
+  crossref 'conf/eurogp/2023'
+}
+
+
 # ================================================================================
 # 2022
 # ================================================================================
@@ -105,7 +134,7 @@ inproceedings {
 
 inproceedings {
   key 'liou:2022:iiswc'
-  title 'Understanding the Power of Evolutionary Computation for GPU Code Optimization'
+  title 'Understanding the Power of Evolutionary Computation for {GPU} Code Optimization'
   author 'Jhe{-}Yu Liou',
          'Muaaz Awan',
          'Steven Hofmeyr',
@@ -123,6 +152,20 @@ inproceedings {
   crossref 'workshop/gi@gecco/2022'
   pages '1946--1947'
   doi '10.1145/3520304.3534042'
+}
+
+inproceedings {
+  key 'ternava:2022:icsr'
+  title 'Scratching the Surface of {./configure}'
+  subtitle 'Learning the Effects of Compile-Time Options on Binary Size and Gadgets'
+  author 'Xhevahire Tërnava',
+         'Mathieu Acher',
+         'Luc Lesoil',
+         'Arnaud Blouin',
+         'Jean{-}Marc Jézéquel'
+  crossref 'conf/icsr/2022'
+  pages '41--58'
+  doi '10.1007/978-3-031-08129-3\_3'
 }
 
 inproceedings {
@@ -207,7 +250,7 @@ inproceedings {
 
 inproceedings {
   key 'canales:2021:icpe-wip'
-  title 'Optimization of Java Virtual Machine Flags using Feature Model and Genetic Algorithm'
+  title 'Optimization of {J}ava Virtual Machine Flags using Feature Model and Genetic Algorithm'
   author 'Felipe Canales',
          'Geoffrey Hecht',
          'Alexandre Bergel'
@@ -370,6 +413,18 @@ inproceedings {
 }
 
 inproceedings {
+  key 'neth:2021:ics'
+  title 'Inter-loop optimization in {RAJA} using loop chains'
+  author 'Brandon Neth',
+         'Thomas R. W. Scogland',
+         'Bronis R. de Supinski',
+         'Michelle Mills Strout'
+  crossref 'conf/ics/2021'
+  pages '1--12'
+  doi '10.1145/3447818.3461665'
+}
+
+inproceedings {
   key 'ploensin:2021:icapm'
   title 'Code Transformation Impact on Compiler-based Optimization'
   subtitle '{A} Case Study in the {CMSSW}'
@@ -382,15 +437,14 @@ inproceedings {
 }
 
 inproceedings {
-  key 'neth:2021:ics'
-  title 'Inter-loop optimization in {RAJA} using loop chains'
-  author 'Brandon Neth',
-         'Thomas R. W. Scogland',
-         'Bronis R. de Supinski',
-         'Michelle Mills Strout'
-  crossref 'conf/ics/2021'
-  pages '1--12'
-  doi '10.1145/3447818.3461665'
+  key 'renzullo:ipdps:2021'
+  title 'Multiplicative Weights Algorithms for Parallel Automated Software Repair'
+  author 'Joseph Renzullo',
+         'Westley Weimer',
+         'Stephanie Forrest'
+  crossref 'conf/ipdps/2021'
+  pages '984--993'
+  doi '10.1109/IPDPS49936.2021.00107'
 }
 
 inproceedings {
@@ -417,8 +471,20 @@ inproceedings {
 }
 
 inproceedings {
+  key 'sae-dan:2021:his'
+  title 'Automatic Algorithm Multi-Configuration Applied to an Optimization Algorithm'
+  author 'Weerapan Sae{-}Dan',
+         'Marie{-}Éléonore Kessaci',
+         'Nadarajen Veerapen',
+         'Laetitia Jourdan'
+  crossref 'conf/his/2021'
+  pages '160--170'
+  doi '10.1007/978-3-030-96305-7\_15'
+}
+
+inproceedings {
   key 'weng:2021:cgo'
-  title '{UNIT:} {U}nifying Tensorized Instruction Compilation'
+  title '{UNIT}: {U}nifying Tensorized Instruction Compilation'
   author 'Jian Weng',
          'Animesh Jain',
          'Jie Wang',
@@ -564,7 +630,7 @@ inproceedings {
 
 inproceedings {
   key 'bruce:2020:fse'
-  title '{JShrink}: {I}n-depth investigation into debloating modern Java applications'
+  title '{JShrink}: {I}n-depth investigation into debloating modern {J}ava applications'
   author 'Bobby R. Bruce',
          'Tianyi Zhang',
          'Jaspreet Arora',
@@ -604,7 +670,7 @@ inproceedings {
 
 inproceedings {
   key 'cosman:2020:sigcse'
-  title '{PABLO:} Helping Novices Debug {P}ython Code Through Data-Driven Fault Localization'
+  title '{PABLO}: {H}elping Novices Debug {P}ython Code Through Data-Driven Fault Localization'
   author 'Benjamin Cosman',
          'Madeline Endres',
          'Georgios Sakkas',
@@ -770,7 +836,7 @@ inproceedings {
 
 inproceedings {
   key 'liou:2020:newk-gecco'
-  title '{GEVO-ML}: a proposal for optimizing {ML} code with evolutionary computation'
+  title '{GEVO-ML}: {A} proposal for optimizing {ML} code with evolutionary computation'
   author 'Jhe{-}Yu Liou',
          'Xiaodong Wang',
          'Stephanie Forrest',
@@ -801,7 +867,7 @@ inproceedings {
 
 inproceedings {
   key 'macias:2020:fse'
-  title '{WebJShrink}: {A} web service for debloating {Java} bytecode'
+  title '{WebJShrink}: {A} web service for debloating {J}ava bytecode'
   author 'Konner Macias',
          'Mihir Mathur',
          'Bobby R. Bruce',
@@ -814,7 +880,7 @@ inproceedings {
 
 inproceedings {
   key 'matsumura:2020:cgo'
-  title '{AN5D:} automated stencil framework for high-degree temporal blocking on {GPU}s'
+  title '{AN5D}: {A}utomated stencil framework for high-degree temporal blocking on {GPU}s'
   author 'Kazuaki Matsumura',
          'Hamid Reza Zohouri',
          'Mohamed Wahib',
@@ -893,6 +959,18 @@ inproceedings {
 }
 
 inproceedings {
+  key 'sae-dan:2020:ecada@gecco'
+  title 'Time-dependent automatic parameter configuration of a local search algorithm'
+  author 'Weerapan Sae{-}Dan',
+         'Marie{-}Éléonore Kessaci',
+         'Nadarajen Veerapen',
+         'Laetitia Jourdan'
+  crossref 'workshop/ecada@gecco/2020'
+  pages '1898--1905'
+  doi '10.1145/3377929.3398107'
+}
+
+inproceedings {
   key 'sakamoto:2020:hpcasia'
   title 'The Effectiveness of Low-Precision Floating Arithmetic on Numerical Codes'
   subtitle '{A} Case Study on Power Consumption'
@@ -917,6 +995,19 @@ inproceedings {
   crossref 'conf/pldi/2020'
   pages '16--30'
   doi '10.1145/3385412.3386005'
+}
+
+inproceedings {
+  key 'sallou:2020:iccs'
+  title 'Loop Aggregation for Approximate Scientific Computing'
+  author 'June Sallou',
+         'Alexandre Gauvain',
+         'Johann Bourcier',
+         'Benoît Combemale',
+         'Jean{-}Raynald de Dreuzy'
+  crossref 'conf/iccs/2020-2'
+  pages '141--155'
+  doi '10.1007/978-3-030-50417-5\_11'
 }
 
 inproceedings {
@@ -1119,7 +1210,7 @@ inproceedings {
 
 inproceedings {
   key 'brown:2019:feast-ccs'
-  title '{CARVE}: Practical Security-Focused Software Debloating Using Simple Feature Set Mappings'
+  title '{CARVE}: {P}ractical Security-Focused Software Debloating Using Simple Feature Set Mappings'
   author 'Michael D. Brown',
          'Santosh Pande'
   crossref 'workshop/feast@ccs/2019'
@@ -1262,7 +1353,7 @@ inproceedings {
 
 inproceedings {
   key 'khatchadourian:2019:icse'
-  title 'Safe automated refactoring for intelligent parallelization of {Java} 8 streams'
+  title 'Safe automated refactoring for intelligent parallelization of {J}ava 8 streams'
   author 'Raffi Khatchadourian',
          'Yiming Tang',
          'Mehdi Bagherzadeh',
@@ -1541,7 +1632,7 @@ inproceedings {
 
 inproceedings {
   key 'qian:2019:uss'
-  title '{RAZOR:} {A} Framework for Post-deployment Software Debloating'
+  title '{RAZOR}: {A} Framework for Post-deployment Software Debloating'
   author 'Chenxiong Qian',
          'Hong Hu',
          'Mansour Alharthi',
@@ -1564,7 +1655,7 @@ inproceedings {
 
 inproceedings {
   key 'rakhshani:2019:emo'
-  title '{MAC}: Many-objective Automatic Algorithm Configuration'
+  title '{MAC}: {M}any-objective Automatic Algorithm Configuration'
   author 'Hojjat Rakhshani',
          'Lhassane Idoumghar',
          'Julien Lepagnot',
@@ -1572,6 +1663,17 @@ inproceedings {
   crossref 'conf/emo/2019'
   pages '241--253'
   doi '10.1007/978-3-030-12598-1_20'
+}
+
+inproceedings {
+  key 'rodriguez-cancio:2019:cf'
+  title 'Approximate loop unrolling'
+  author 'Marcelino Rodriguez{-}Cancio',
+         'Benoît Combemale',
+         'Benoit Baudry'
+  crossref 'conf/cf/2019'
+  pages '94--105'
+  doi '10.1145/3310273.3323841'
 }
 
 inproceedings {
@@ -1664,6 +1766,20 @@ inproceedings {
 # ================================================================================
 # 2018
 # ================================================================================
+
+inproceedings {
+  key 'acher:2018:vamos'
+  title '{VaryLATEX}: {L}earning Paper Variants That Meet Constraints'
+  author 'Mathieu Acher',
+         'Paul Temple',
+         'Jean{-}Marc Jézéquel',
+         'José Angel Galindo',
+         'Jabier Martinez',
+         'Tewfik Ziadi'
+  crossref 'workshop/vamos/2018'
+  pages '83--88'
+  doi '10.1145/3168365.3168372'
+}
 
 inproceedings {
   key 'afzal:2018:gi-icse'
@@ -2118,7 +2234,7 @@ inproceedings {
 
 inproceedings {
   key 'pereira:2018:ase'
-  title '{jStanley}: {P}lacing a green thumb on {Java} collections'
+  title '{jStanley}: {P}lacing a green thumb on {J}ava collections'
   author 'Rui Pereira',
          'Pedro Simão',
          'Jácome Cunha',
@@ -2424,7 +2540,7 @@ inproceedings {
 
 inproceedings {
   key 'brumar:2017:ipdps'
-  title '{ATM:} Approximate Task Memoization in the Runtime System'
+  title '{ATM}: {A}pproximate Task Memoization in the Runtime System'
   author 'Iulian Brumar',
          'Marc Casas',
          'Miquel Moretó',
@@ -2593,7 +2709,7 @@ inproceedings {
 
 inproceedings {
   key 'le:2017:fse'
-  title '{S3}: syntax- and semantic-guided repair synthesis via programming by examples'
+  title '{S3}: {S}yntax- and semantic-guided repair synthesis via programming by examples'
   author 'Xuan{-}Bach D. Le',
          'Duc{-}Hiep Chu',
          'David Lo',
@@ -3181,7 +3297,7 @@ inproceedings {
 
 inproceedings {
   key 'wu:2016:ssbse'
-  title '{HOMI}: Searching Higher Order Mutants for Software Improvement'
+  title '{HOMI}: {S}earching Higher Order Mutants for Software Improvement'
   author 'Fan Wu',
          'Mark Harman',
          'Yue Jia',
@@ -3873,7 +3989,7 @@ inproceedings {
 
 inproceedings {
   key 'kocsis:2014:ssbse'
-  title 'Repairing and Optimizing Hadoop hashCode Implementations'
+  title 'Repairing and Optimizing {H}adoop hash{C}ode Implementations'
   author 'Zoltan A. Kocsis',
          'Geoffrey Neumann',
          'Jerry Swan',
@@ -4022,7 +4138,7 @@ inproceedings {
 
 inproceedings {
   key 'tao:2014:icsme'
-  title 'Refactoring Java Concurrent Programs Based on Synchronization Requirement Analysis'
+  title 'Refactoring {J}ava Concurrent Programs Based on Synchronization Requirement Analysis'
   author 'Binxian Tao',
          'Ju Qian'
   crossref 'conf/icsme/2014'
@@ -4157,7 +4273,7 @@ inproceedings {
 
 inproceedings {
   key 'hung-cuong:2013:iccasa'
-  title 'Rule-Based Techniques Using Abstract Syntax Tree for Code Optimization and Secure Programming in {Java}'
+  title 'Rule-Based Techniques Using Abstract Syntax Tree for Code Optimization and Secure Programming in {J}ava'
   author 'Nguyen Hung{-}Cuong',
          'Huynh Quyet Thang',
          'Tru Ba{-}Vuong'
@@ -4491,7 +4607,7 @@ inproceedings {
 
 inproceedings {
   key 'plumbridge:2012:recosoc'
-  title 'Translating Java for resource constrained embedded systems'
+  title 'Translating {J}ava for resource constrained embedded systems'
   author 'Gary Plumbridge',
          'Neil C. Audsley'
   crossref 'workshop/recosoc/2012'
@@ -4595,7 +4711,7 @@ inproceedings {
 
 inproceedings {
   key 'ilham:2011:iceei'
-  title 'Evaluation and optimization of Java object ordering schemes'
+  title 'Evaluation and optimization of {J}ava object ordering schemes'
   author 'Amil A. Ilham',
          'Kazuaki J. Murakami'
   crossref 'conf/iceei/2011'
@@ -4781,7 +4897,7 @@ inproceedings {
 
 inproceedings {
   key 'lee:2010:interact-asplos'
-  title 'Code Size and Performance Optimization for Mobile JavaScript Just-in-Time Compiler'
+  title 'Code Size and Performance Optimization for Mobile {J}ava{S}cript Just-in-Time Compiler'
   author 'Seong{-}Won Lee',
          'Soo{-}Mook Moon',
          'Won{-}Ki Jung',
@@ -4871,7 +4987,7 @@ inproceedings {
 
 inproceedings {
   key 'vallee-rai:2010:cascon-fdhip'
-  title 'Soot: {A} {Java} Bytecode Optimization Framework'
+  title 'Soot: {A} {J}ava Bytecode Optimization Framework'
   author 'Raja Vallée{-}Rai',
          'Phong Co',
          'Etienne Gagnon',
@@ -5188,7 +5304,7 @@ inproceedings {
 
 inproceedings {
   key 'bonny:2008:iccad'
-  title '{FBT:} filled buffer technique to reduce code size for {VLIW} processors'
+  title '{FBT}: {F}illed buffer technique to reduce code size for {VLIW} processors'
   author 'Talal Bonny',
          'Jörg Henkel'
   crossref 'conf/iccad/2008'
@@ -5895,7 +6011,7 @@ inproceedings {
 
 inproceedings {
   key 'hoos:2000:sat'
-  title '{SATLIB}: {An} Online Resource for Research on {SAT}'
+  title '{SATLIB}: {A}n Online Resource for Research on {SAT}'
   author 'Holger H. Hoos',
          'Thomas Stützle'
   crossref 'conf/sat/2000'

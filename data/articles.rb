@@ -122,6 +122,22 @@ article {
 }
 
 article {
+  key 'martin:2022:tse'
+  title 'Transfer Learning Across Variants and Versions: {T}he Case of Linux Kernel Size'
+  author 'Hugo Martin',
+         'Mathieu Acher',
+         'Juliana Alves Pereira',
+         'Luc Lesoil',
+         'Jean{-}Marc Jézéquel',
+         'Djamel Eddine Khelladi'
+  fragment 'journal/ieee-tse'
+  volume 48
+  number 11
+  pages '4274--4290'
+  doi '10.1109/TSE.2021.3116768'
+}
+
+article {
   key 'pinto:2022:tse'
   title 'Pegasus: {P}erformance Engineering for Software Applications Targeting {HPC} Systems'
   author 'Pedro Pinto',
@@ -140,6 +156,17 @@ article {
   number 3
   pages '732--754'
   doi '10.1109/TSE.2020.3001257'
+}
+
+article {
+  key 'soto-valero:2022:tsem'
+  title 'Coverage-Based Debloating for {J}ava Bytecode'
+  author 'César Soto{-}Valero',
+         'Thomas Durieux',
+         'Nicolas Harrand',
+         'Benoit Baudry'
+  fragment 'journal/acm-tsem'
+  doi '10.1145/3546948'
 }
 
 article {
@@ -218,7 +245,7 @@ article {
 
 article {
   key 'farzat:2021:tse'
-  title 'Evolving JavaScript Code to Reduce Load Time'
+  title 'Evolving {J}ava{S}cript Code to Reduce Load Time'
   author 'Fábio de Almeida Farzat',
          'Márcio de Oliveira Barros',
          'Guilherme H. Travassos'
@@ -469,6 +496,32 @@ article {
   number 1
   pages '44--56'
   doi '10.1109/TEVC.2019.2906581'
+}
+
+article {
+  key 'langdon:2020:sen'
+  title 'Genetic Improvement @ ICSE 2020'
+  author 'William B. Langdon',
+         'Westley Weimer',
+         'Justyna Petke',
+         'Erik Fredericks',
+         'Seongmin Lee',
+         'Emily Winter',
+         'Michail Basios',
+         'Myra B. Cohen',
+         'Aymeric Blot',
+         'Markus Wagner',
+         'Bobby R. Bruce',
+         'Shin Yoo',
+         'Simos Gerasimou',
+         'Oliver Krauss',
+         'Yu Huang',
+         'Michael Gerten'
+  fragment 'journal/acm-sigsoft-sen'
+  volume 45
+  number 4
+  pages '24--30'
+  doi '10.1145/3417564.3417575'
 }
 
 article {
@@ -731,7 +784,7 @@ article {
 
 article {
   key 'vasquez:2019:ist'
-  title 'Slimming javascript applications: An approach for removing unused functions from javascript libraries'
+  title 'Slimming {J}ava{S}cript applications: An approach for removing unused functions from {J}ava{S}cript libraries'
   author 'Hernán Ceferino Vázquez',
          'Alexandre Bergel',
          'Santiago A. Vidal',
@@ -759,7 +812,7 @@ article {
 
 article {
   key 'wang:2019:access-2'
-  title 'Leveraging WebAssembly for Numerical {JavaScript} Code Virtualization'
+  title 'Leveraging WebAssembly for Numerical {J}ava{S}cript Code Virtualization'
   author 'Shuai Wang',
          'Dingyi Fang',
          'Zheng Wang',
@@ -799,7 +852,7 @@ article {
 
 article {
   key 'farzat:2018:jserd'
-  title 'Challenges on applying genetic improvement in JavaScript using a high-performance computer'
+  title 'Challenges on applying genetic improvement in {J}ava{S}cript using a high-performance computer'
   author 'Fábio de Almeida Farzat',
          'Márcio de Oliveira Barros',
          'Guilherme H. Travassos'
@@ -820,6 +873,18 @@ article {
   number 2
   pages '377--390'
   doi '10.1109/TPDS.2017.2754376'
+}
+
+article {
+  key 'kocsis:2018:jar'
+  title 'Genetic Programming + Proof Search = Automatic Improvement'
+  author 'Zoltan A. Kocsis',
+         'Jerry Swan'
+  fragment 'journal/jar'
+  volume 60
+  number 2
+  pages '157--176'
+  doi '10.1007/s10817-017-9409-5'
 }
 
 article {
@@ -1117,7 +1182,7 @@ article {
 
 article {
   key 'yeboah-antwi:2017:gpem'
-  title 'Online Genetic Improvement on the java virtual machine with {ECSELR}'
+  title 'Online Genetic Improvement on the {J}ava virtual machine with {ECSELR}'
   author 'Kwaku Yeboah{-}Antwi',
          'Benoit Baudry'
   fragment 'journal/gpem'
@@ -1607,7 +1672,7 @@ article {
 
 article {
   key 'hutter:2009:jair'
-  title '{ParamILS}: An Automatic Algorithm Configuration Framework'
+  title '{ParamILS}: {A}n Automatic Algorithm Configuration Framework'
   author 'Frank Hutter',
          'Holger H. Hoos',
          'Kevin Leyton{-}Brown',
@@ -2029,7 +2094,7 @@ article {
 
 article {
   key 'zitzler:2001:tik'
-  title '{SPEA2}: Improving the strength Pareto evolutionary algorithm'
+  title '{SPEA2}: {I}mproving the strength Pareto evolutionary algorithm'
   author 'Eckart Zitzler',
          'Marco Laumanns',
          'Lothar Thiele'
@@ -2083,6 +2148,18 @@ article {
   number 2
   pages '101--132'
   doi '10.2307/1165329'
+}
+
+article {
+  key 'whittaker:2000:softw'
+  title 'What Is Software Testing? Why Is It So Hard?'
+  subtitle 'Practice Tutorial'
+  author 'James A. Whittaker'
+  fragment 'journal/ieee-software'
+  volume 17
+  number 1
+  pages '70--79'
+  doi '10.1109/52.819971'
 }
 
 

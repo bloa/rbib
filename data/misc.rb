@@ -55,6 +55,14 @@ fragment {
 }
 
 fragment {
+  key 'series/springer-lnns'
+  series 'Lecture Notes in Networks and Systems'
+  series_short 'Lect. Notes Netw. Syst.'
+  series_abbrv 'LNNS'
+  publisher 'Springer'
+}
+
+fragment {
   key 'series/springer-sci'
   series 'Studies in Computational Intelligence'
   series_short 'Stud. Comput. Intell.'

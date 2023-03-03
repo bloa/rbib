@@ -176,6 +176,23 @@ proceedings {
 
 
 # ================================================================================
+# ECADA
+# ================================================================================
+
+fragment {
+  key 'workshop/ecada'
+  title 'Evolutionary Computation for the Automated Design of Algorithms'
+}
+
+proceedings {
+  key 'workshop/ecada@gecco/2020'
+  inherit 'conf/gecco/2020/comp'
+  update(:title_prefix, '10th Workshop on Evolutionary Computation for the Automated Design of Algorithms, %s'%get(:title_prefix))
+  update(:title_short, 'ECADA@GECCO 2020 in %s'%get(:title_short))
+}
+
+
+# ================================================================================
 # ERLANG
 # ================================================================================
 
@@ -974,6 +991,25 @@ proceedings {
 
 
 # ================================================================================
+# SMGP
+# ================================================================================
+
+fragment {
+  key 'workshop/smgp'
+  title 'Semantic Methods in Genetic Programming'
+}
+
+proceedings {
+  key 'workshop/smgp@ppsn/2014'
+  fragment 'workshop/smgp'
+  title_short '{SMGP@PPSN} 2014'
+  place 'Ljubljana, Slovenia'
+  date 'September 13, 2014'
+  year 2014
+}
+
+
+# ================================================================================
 # UCHPC-MAW
 # ================================================================================
 
@@ -993,3 +1029,24 @@ proceedings {
 }
 
 
+# ================================================================================
+# VAMOS
+# ================================================================================
+
+fragment {
+  key 'workshop/vamos'
+  title 'Variability Modelling of Software-Intensive Systems'
+  title_short (promise {'{VAMOS} %s'%(get(:year))})
+  publisher '{ACM}'
+}
+
+proceedings {
+  key 'workshop/vamos/2018'
+  fragment 'conf/vamos'
+  editor 'Rafael Capilla', 'Malte Lochau', 'Lidia Fuentes'
+  title_prefix 'Proceedings of the 12th International Workshop on'
+  isbn '978-1-4503-5398-4'
+  place 'Madrid, Spain'
+  date 'February 7--9, 2018'
+  year 2018
+}

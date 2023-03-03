@@ -135,15 +135,21 @@ fragment {
 }
 
 fragment {
+  key 'journal/jar'
+  journal 'Journal of Automated Reasoning'
+  journal_short 'J. Autom. Reason.'
+}
+
+fragment {
   key 'journal/jair'
   journal 'Journal of Artificial Intelligence Research'
   journal_short 'J. Artif. Intell. Res.'
 }
 
 fragment {
-  key 'journal/jar'
-  journal 'Journal of Automated Reasoning'
-  journal_short 'J. Autom. Reason.'
+  key 'journal/jcst'
+  journal 'Journal of Computer Science and Technology'
+  journal_short 'J. Comput. Sci. Technol.'
 }
 
 fragment {
@@ -156,12 +162,6 @@ fragment {
   key 'journal/jfp'
   journal 'Journal of Functional Programming'
   journal_short 'J. Funct. Program.'
-}
-
-fragment {
-  key 'journal/jcst'
-  journal 'Journal of Computer Science and Technology'
-  journal_short 'J. Comput. Sci. Technol.'
 }
 
 fragment {
@@ -270,6 +270,13 @@ fragment {
   key 'journal/acm-pl'
   journal 'Proceedings of the ACM on Programming Languages'
   journal_short 'Proc. {ACM} Program. Lang.'
+  publisher '{ACM}'
+}
+
+fragment {
+  key 'journal/acm-sigsoft-sen'
+  journal 'ACM SIGSOFT Software Engineering Notes'
+  journal_short '{ACM} {SIGSOFT} Softw. Eng. Notes'
   publisher '{ACM}'
 }
 
